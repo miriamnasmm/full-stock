@@ -1,281 +1,266 @@
-/* =========================================
-   Full Stock - Estilos Globales
-   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
 
-/* Importar fuente de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
-
-/* Reset y box-sizing global */
-*,
-*::before,
-*::after {
+/* ===== RESET Y BASE ===== */
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* =========================================
-   Variables de diseño
-   ========================================= */
-:root {
-  --color-bg: #ffffff;
-  --color-text: #1a1a1a;
-  --color-text-muted: #666666;
-  --color-heading: #111111;
-  --color-accent: #2d2d2d;
-  --color-border: #e5e5e5;
-  --color-header-bg: #111111;
-  --color-header-text: #ffffff;
-  --color-footer-bg: #1a1a1a;
-  --color-footer-text: #cccccc;
-  --color-link: #111111;
-  --color-link-hover: #555555;
-
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body: 'Inter', system-ui, sans-serif;
-
-  --max-width: 800px;
-  --spacing-xs: 8px;
-  --spacing-sm: 16px;
-  --spacing-md: 24px;
-  --spacing-lg: 48px;
-  --spacing-xl: 80px;
-}
-
-/* =========================================
-   Base
-   ========================================= */
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: var(--font-body);
-  font-weight: 400;
-  color: var(--color-text);
-  background-color: var(--color-bg);
-  line-height: 1.7;
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+  background-color: #fff;
 }
 
-/* =========================================
-   Tipografía
-   ========================================= */
-h1, h2, h3, h4 {
-  font-family: var(--font-display);
-  color: var(--color-heading);
-  line-height: 1.25;
-  font-weight: 700;
-}
-
-h1 {
-  font-size: 2.75rem;
-  margin-bottom: var(--spacing-md);
-}
-
-h2 {
-  font-size: 1.75rem;
-  margin-bottom: var(--spacing-sm);
-}
-
-h3 {
-  font-size: 1.25rem;
-  margin-bottom: var(--spacing-xs);
-}
-
-p {
-  font-size: 1rem;
-  color: var(--color-text);
-  margin-bottom: var(--spacing-sm);
-}
-
-p:last-child {
-  margin-bottom: 0;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
-  color: var(--color-link);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: color 0.2s ease;
+  text-decoration: none;
+  color: inherit;
 }
 
-a:hover {
-  color: var(--color-link-hover);
+/* ===== CONTAINER ===== */
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-ul, ol {
-  padding-left: var(--spacing-md);
-  margin-bottom: var(--spacing-sm);
+@media (min-width: 40rem) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
-li {
-  margin-bottom: var(--spacing-xs);
-  line-height: 1.6;
+@media (min-width: 64rem) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
-strong {
-  font-weight: 600;
-  color: var(--color-heading);
-}
-
-/* =========================================
-   Header
-   ========================================= */
-header {
-  background-color: var(--color-header-bg);
-  color: var(--color-header-text);
-  padding: var(--spacing-sm) var(--spacing-md);
-  border-bottom: 2px solid #333333;
+/* ===== HEADER ===== */
+.site-header {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 1rem 0;
 }
 
 .header-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: var(--spacing-sm);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 80rem;
+  margin: 0 auto;
 }
 
 .logo {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
-  color: var(--color-header-text);
-  letter-spacing: 0.05em;
+  font-size: 1.5rem;
+  color: #1a1a1a;
 }
 
-header nav {
+.header-nav {
   display: flex;
-  gap: var(--spacing-md);
-  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-header nav a {
-  color: #cccccc;
-  text-decoration: none;
+.header-nav a {
+  font-size: 0.95rem;
+  color: #444;
+  transition: color 0.2s;
+}
+
+.header-nav a:hover {
+  color: #000;
+}
+
+.cart-icon {
+  color: #444;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon:hover {
+  color: #000;
+}
+
+/* ===== CATEGORIES SECTION ===== */
+.categories-section {
+  padding: 3rem 0;
+}
+
+.categories-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.categories-subtitle {
+  color: #555;
+  line-height: 1.6;
+  max-width: 60ch;
+  margin-bottom: 2rem;
+}
+
+.categories-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 40rem) {
+  .categories-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .category-card {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+@media (min-width: 64rem) {
+  .categories-grid {
+    flex-wrap: nowrap;
+  }
+
+  .category-card {
+    flex: 1;
+  }
+}
+
+.category-image-container {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.category-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.category-card p {
+  color: #555;
   font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  transition: color 0.2s ease;
+  line-height: 1.5;
 }
 
-header nav a:hover {
-  color: #ffffff;
+/* ===== FOOTER ===== */
+.site-footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 2rem 0;
+  margin-top: 2rem;
 }
 
-/* =========================================
-   Main Content
-   ========================================= */
-main {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: var(--spacing-xl) var(--spacing-md);
+/* ===== PÁGINAS INTERNAS (about, privacy, terms) ===== */
+.header-inner nav a,
+header nav a {
+  color: #444;
+  font-size: 0.95rem;
 }
 
-/* Secciones dentro de main */
-main section {
-  margin-bottom: var(--spacing-lg);
-  padding-bottom: var(--spacing-lg);
-  border-bottom: 1px solid var(--color-border);
+header {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 1rem 0;
 }
 
-main section:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-/* Hero section */
-.hero-section {
-  text-align: left;
-}
-
-.hero-subtitle {
-  font-size: 1.15rem;
-  color: var(--color-text-muted);
-  max-width: 600px;
-  line-height: 1.8;
-}
-
-/* =========================================
-   Footer
-   ========================================= */
-footer {
-  background-color: var(--color-footer-bg);
-  color: var(--color-footer-text);
-  padding: var(--spacing-md);
-  margin-top: var(--spacing-xl);
-}
-
-.footer-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
+.header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: var(--spacing-sm);
 }
 
-footer p {
-  font-size: 0.85rem;
-  color: var(--color-footer-text);
-  margin-bottom: 0;
+main {
+  max-width: 50rem;
+  margin: 3rem auto;
+  padding: 0 1rem;
 }
 
-footer nav {
-  display: flex;
-  gap: var(--spacing-md);
-  flex-wrap: wrap;
+section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #e5e5e5;
 }
 
-footer nav a {
-  color: #aaaaaa;
+section:last-child {
+  border-bottom: none;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: #0066cc;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #1a1a1a;
   text-decoration: none;
-  font-size: 0.85rem;
-  transition: color 0.2s ease;
 }
 
-footer nav a:hover {
-  color: #ffffff;
+footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
 }
 
-/* =========================================
-   Página de Privacidad y Términos
-   ========================================= */
-.page-header {
-  margin-bottom: var(--spacing-lg);
-  padding-bottom: var(--spacing-lg);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.page-header p {
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
-}
-
-/* =========================================
-   Responsive
-   ========================================= */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  main {
-    padding: var(--spacing-lg) var(--spacing-sm);
-  }
-
-  .header-inner,
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.footer-inner {
+  max-width: 50rem;
+  margin: 0 auto;
 }
